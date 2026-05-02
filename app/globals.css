@@ -1,0 +1,247 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* ─── LIGHT MODE (cream theme) ─── */
+:root {
+  --background:       #faf8f4;
+  --foreground:       #1a1a2e;
+  --card:             #ffffff;
+  --card-foreground:  #1a1a2e;
+  --popover:          #ffffff;
+  --popover-foreground: #1a1a2e;
+  --primary:          #5b21b6;
+  --primary-foreground: #ffffff;
+  --secondary:        #f5f0e8;
+  --secondary-foreground: #1a1a2e;
+  --muted:            #f0ebe3;
+  --muted-foreground: #6b7280;
+  --accent:           #b8860b;
+  --accent-foreground: #1a1a2e;
+  --destructive:      oklch(0.577 0.245 27.325);
+  --destructive-foreground: #ffffff;
+  --border:           rgba(0,0,0,0.08);
+  --input:            #ffffff;
+  --ring:             #5b21b6;
+  --radius:           1rem;
+
+  /* Shared brand tokens */
+  --gold:             #b8860b;
+  --gold-light:       #daa520;
+  --gold-dim:         rgba(184,134,11,0.18);
+  --purple-deep:      #5b21b6;
+  --purple-light:     #7c3aed;
+
+  /* Light-specific surface tokens */
+  --surface-page:     #faf8f4;
+  --surface-card:     #ffffff;
+  --surface-raised:   #f5f0e8;
+  --surface-input:    #ffffff;
+  --surface-subtle:   #f0ebe3;
+  --surface-overlay:  rgba(31,20,46,0.55);
+
+  --text-primary:     #1a1a2e;
+  --text-secondary:   #3a3340;
+  --text-muted:       #6b7280;
+  --text-on-primary:  #ffffff;
+  --text-on-gold:     #1a1a2e;
+
+  --nav-bg:           #ffffff;
+  --nav-border:       rgba(0,0,0,0.08);
+  --nav-inactive:     #9b8fa8;
+
+  --divider:          #f0eaf8;
+  --streak-flame:     #ff6b35;
+
+  /* Prayer-wall card accent */
+  --wall-card-border:     #f0e8fc;
+  --wall-card-shadow:     rgba(74,50,104,0.07);
+  --wall-praying-bg:      #f5f0fb;
+  --wall-unread-bg:       #ede8f5;
+
+  /* Tag colours (same in both themes) */
+  --tag-healing-bg:   #fce8e8;  --tag-healing-text:  #b94040;
+  --tag-family-bg:    #e8f0fc;  --tag-family-text:   #3a5ca8;
+  --tag-guidance-bg:  #f0e8fc;  --tag-guidance-text: #6b3aab;
+  --tag-gratitude-bg: #fef6e0;  --tag-gratitude-text:#a07820;
+  --tag-strength-bg:  #e8fcf0;  --tag-strength-text: #2e8a56;
+  --tag-peace-bg:     #e8f8fc;  --tag-peace-text:    #2878a0;
+
+  --prayer-answered-bg:   rgba(34,130,84,0.10);   --prayer-answered-text:  #1a6644;  --prayer-answered-border: rgba(34,130,84,0.22);
+  --prayer-ongoing-bg:    rgba(201,168,76,0.12);  --prayer-ongoing-text:   #8a6a10;  --prayer-ongoing-border:  rgba(201,168,76,0.30);
+  --prayer-new-bg:        rgba(74,50,104,0.10);   --prayer-new-text:       #4a3268;  --prayer-new-border:      rgba(74,50,104,0.22);
+}
+
+/* ─── DARK MODE (navy theme) ─── */
+:root.dark {
+  --background:       #0a0f1a;
+  --foreground:       #f5f0e8;
+  --card:             #111827;
+  --card-foreground:  #f5f0e8;
+  --popover:          #1a1f2e;
+  --popover-foreground: #f5f0e8;
+  --primary:          #d4a843;
+  --primary-foreground: #0a0f1a;
+  --secondary:        #1a1f2e;
+  --secondary-foreground: #f5f0e8;
+  --muted:            #1a1f2e;
+  --muted-foreground: #9ca3af;
+  --accent:           #d4a843;
+  --accent-foreground: #0a0f1a;
+  --destructive:      oklch(0.577 0.245 27.325);
+  --destructive-foreground: #f5f0e8;
+  --border:           rgba(255,255,255,0.08);
+  --input:            #1a1f2e;
+  --ring:             #d4a843;
+
+  /* Shared brand tokens */
+  --gold:             #d4a843;
+  --gold-light:       #e8c97a;
+  --gold-dim:         rgba(212,168,67,0.18);
+  --purple-deep:      #7c5cbf;
+  --purple-light:     #9b7fd9;
+
+  /* Dark-specific surface tokens */
+  --surface-page:     #0a0f1a;
+  --surface-card:     #111827;
+  --surface-raised:   #1a1f2e;
+  --surface-input:    #1a1f2e;
+  --surface-subtle:   #2c3e50;
+  --surface-overlay:  rgba(0,0,0,0.65);
+
+  --text-primary:     #f5f0e8;
+  --text-secondary:   #d4c9ba;
+  --text-muted:       #9ca3af;
+  --text-on-primary:  #0a0f1a;
+  --text-on-gold:     #0a0f1a;
+
+  --nav-bg:           #111827;
+  --nav-border:       rgba(255,255,255,0.08);
+  --nav-inactive:     #6b7280;
+
+  --divider:          #2c3e50;
+  --streak-flame:     #ff6b35;
+
+  --wall-card-border:     #2a3f55;
+  --wall-card-shadow:     rgba(0,0,0,0.25);
+  --wall-praying-bg:      rgba(201,168,76,0.15);
+  --wall-unread-bg:       #1e2d3d;
+
+  --tag-healing-bg:   rgba(185,64,64,0.18);   --tag-healing-text:  #e89090;
+  --tag-family-bg:    rgba(58,92,168,0.18);   --tag-family-text:   #90aae8;
+  --tag-guidance-bg:  rgba(107,58,171,0.18);  --tag-guidance-text: #c090e8;
+  --tag-gratitude-bg: rgba(160,120,32,0.18);  --tag-gratitude-text:#e8c97a;
+  --tag-strength-bg:  rgba(46,138,86,0.18);   --tag-strength-text: #80d4a0;
+  --tag-peace-bg:     rgba(40,120,160,0.18);  --tag-peace-text:    #80c8e8;
+
+  --prayer-answered-bg:   rgba(34,130,84,0.18);   --prayer-answered-text:  #80d4a0;  --prayer-answered-border: rgba(34,130,84,0.35);
+  --prayer-ongoing-bg:    rgba(201,168,76,0.18);  --prayer-ongoing-text:   #e8c97a;  --prayer-ongoing-border:  rgba(201,168,76,0.40);
+  --prayer-new-bg:        rgba(201,168,76,0.12);  --prayer-new-text:       #c9a84c;  --prayer-new-border:      rgba(201,168,76,0.30);
+}
+
+@theme inline {
+  --font-sans:  'Inter', sans-serif;
+  --font-serif: 'Lora', 'Georgia', serif;
+  --font-mono:  'Geist Mono', 'Geist Mono Fallback';
+
+  --color-background:         var(--background);
+  --color-foreground:         var(--foreground);
+  --color-card:               var(--card);
+  --color-card-foreground:    var(--card-foreground);
+  --color-popover:            var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary:            var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary:          var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted:              var(--muted);
+  --color-muted-foreground:   var(--muted-foreground);
+  --color-accent:             var(--accent);
+  --color-accent-foreground:  var(--accent-foreground);
+  --color-destructive:        var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border:             var(--border);
+  --color-input:              var(--input);
+  --color-ring:               var(--ring);
+  --radius-sm:  calc(var(--radius) - 4px);
+  --radius-md:  calc(var(--radius) - 2px);
+  --radius-lg:  var(--radius);
+  --radius-xl:  calc(var(--radius) + 4px);
+
+  --color-gold:           var(--gold);
+  --color-gold-light:     var(--gold-light);
+  --color-gold-dim:       var(--gold-dim);
+  --color-purple-deep:    var(--purple-deep);
+  --color-purple-light:   var(--purple-light);
+  --color-surface-page:   var(--surface-page);
+  --color-surface-card:   var(--surface-card);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-input:  var(--surface-input);
+  --color-surface-subtle: var(--surface-subtle);
+  --color-text-primary:   var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted:     var(--text-muted);
+  --color-nav-bg:         var(--nav-bg);
+  --color-nav-border:     var(--nav-border);
+  --color-divider:        var(--divider);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    touch-action: manipulation;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.mobile-stage {
+  width: 100vw;
+  height: 100dvh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--surface-page);
+}
+
+.mobile-viewport {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  max-width: 430px;
+  overflow: hidden;
+  background: var(--surface-page);
+  isolation: isolate;
+}
+
+@media (min-width: 480px) {
+  .mobile-stage {
+    padding: 18px 0;
+    background: #17121f;
+  }
+
+  .mobile-viewport {
+    width: min(430px, calc(100vw - 32px));
+    height: calc(100dvh - 36px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 28px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.38);
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-viewport {
+    max-width: 100vw;
+  }
+}
