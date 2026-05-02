@@ -26,7 +26,7 @@ prompts_with_file_paths: 1
 prompts_with_urls: 3
 prompts_with_long_content: 2
 likely_pasted_count: 2
-----------------------
+---
 
 # Claude Session Log - 2026-05-02
 

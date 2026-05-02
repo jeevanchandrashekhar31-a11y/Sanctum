@@ -27,7 +27,7 @@ prompts_with_file_paths: 0
 prompts_with_urls: 1
 prompts_with_long_content: 0
 likely_pasted_count: 0
-----------------------
+---
 
 # v0 Session Log - 2026-05-02
 
